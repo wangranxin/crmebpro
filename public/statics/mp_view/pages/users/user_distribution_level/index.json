@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "分销等级",
+  "navigationBarBackgroundColor": "#232323",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "recommend": "/components/recommend/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

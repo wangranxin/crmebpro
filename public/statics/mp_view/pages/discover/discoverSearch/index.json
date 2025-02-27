@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索结果",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "waterfalls-flow": "/components/discoverWaterfall/WaterfallsFlow"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "账户登录",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "edit-user-modal": "/components/eidtUserModal/index",
+    "privacy-agreement-popup": "/components/privacyAgreementPopup/index"
+  }
+}

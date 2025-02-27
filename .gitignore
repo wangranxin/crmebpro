@@ -1,0 +1,14 @@
+/.git
+/.idea
+/runtime
+/backup
+/public/uploads
+*.log
+/public/install/install.lock
+public/admin/
+/.env
+/swoole.pid
+public/pages/
+public/static/
+help/docker-compose/mysql/data/mysql/
+help/docker-compose/mysql/data/

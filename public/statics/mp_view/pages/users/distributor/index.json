@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "home": "/components/home/index",
+    "nav-bar": "/components/NavBar",
+    "empty-page": "/components/emptyPage"
+  }
+}

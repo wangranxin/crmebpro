@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "user-member": "/pages/user/components/member/index",
+    "user-order": "/pages/user/components/order/index",
+    "user-order-static": "/pages/user/components/order_static/index",
+    "user-menu": "/pages/user/components/menus/index",
+    "user-poster": "/pages/user/components/poster/index",
+    "page-footer": "/components/pageFooter/index",
+    "ewcomer-pop": "/components/ewcomerPop/index",
+    "edit-user-modal": "/components/eidtUserModal/index"
+  }
+}

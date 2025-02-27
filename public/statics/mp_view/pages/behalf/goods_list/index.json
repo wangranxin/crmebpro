@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "template1": "/pages/behalf/goods_list/template/template1",
+    "template2": "/pages/behalf/goods_list/template/template2"
+  }
+}

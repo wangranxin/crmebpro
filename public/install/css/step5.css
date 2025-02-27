@@ -1,0 +1,69 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrap .title{
+    text-align: center;
+    padding: 23px 0 30px 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 32px !important;
+    display: flex;
+    align-items: center;
+}
+.wrap .title img{
+    width: 30px;
+    height: 30px;
+    margin-right: 17px;
+}
+.section .title{
+    margin-bottom: 0;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60%;
+}
+.bottom-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+.bottom-btn .btn{
+    width: 98px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+.bottom-btn .pre{
+    color: #FFFFFF;
+    margin-right: 20px;
+    border: 1px solid #FFFFFF;
+}
+.bottom-btn .admin{
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+}
+.bottom-btn .pre a{
+    color: #fff;
+}
+.bottom-btn .admin a{
+    color: #5A487D;
+}
+.trip{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.tip{
+    font-size: 14px;
+    color: #F97316;
+}

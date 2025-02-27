@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "订单统计",
+  "usingComponents": {
+    "loading": "/components/Loading/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

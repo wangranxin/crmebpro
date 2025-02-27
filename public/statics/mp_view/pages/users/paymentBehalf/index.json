@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "好友代付",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "home": "/components/home/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

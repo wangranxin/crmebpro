@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "nav-bar": "/components/NavBar",
+    "waterfalls-flow": "/components/discoverWaterfall/WaterfallsFlow",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "互动消息",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "会员中心",
+  "navigationBarBackgroundColor": "#232323",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "recommend": "/components/recommend/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

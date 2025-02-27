@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/kefuIcon/index"],{1603:function(t,e,n){},"53e3":function(t,e,n){"use strict";n.r(e);var o=n("e556"),u=n.n(o);for(var i in o)["default"].indexOf(i)<0&&function(t){n.d(e,t,(function(){return o[t]}))}(i);e["default"]=u.a},7127:function(t,e,n){"use strict";var o=n("1603"),u=n.n(o);u.a},a255:function(t,e,n){"use strict";n.d(e,"b",(function(){return o})),n.d(e,"c",(function(){return u})),n.d(e,"a",(function(){}));var o=function(){var t=this.$createElement;this._self._c},u=[]},d448:function(t,e,n){"use strict";n.r(e);var o=n("a255"),u=n("53e3");for(var i in u)["default"].indexOf(i)<0&&function(t){n.d(e,t,(function(){return u[t]}))}(i);n("7127");var s=n("828b"),r=Object(s["a"])(u["default"],o["b"],o["c"],!1,null,null,null,!1,o["a"],void 0);e["default"]=r.exports},e556:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var o=n("8f59"),u=(getApp(),{name:"kefuIcon",props:{ids:{type:Number,default:0},routineContact:{type:Number,default:0},storeInfo:{type:Object,default:function(){return{}}},goodsCon:{type:Number,default:0}},computed:(0,o.mapGetters)(["userInfo"]),data:function(){return{top:"480"}},mounted:function(){},methods:{setTouchMove:function(t){t.touches[0].clientY<480&&t.touches[0].clientY>66&&(this.top=t.touches[0].clientY)},licks:function(){var t={};t="string"===typeof this.userInfo?JSON.parse(this.userInfo):this.userInfo;var e="/pages/extension/customer_list/chat?productId=".concat(this.ids),n={store_name:this.storeInfo.store_name,path:"/pages/goods_details/index?id=".concat(this.storeInfo.id),image:this.storeInfo.image};this.$util.getCustomer(t,e,n,1)}},created:function(){}});e.default=u}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/kefuIcon/index-create-component',
+    {
+        'components/kefuIcon/index-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('df3c')['createComponent'](__webpack_require__("d448"))
+        })
+    },
+    [['components/kefuIcon/index-create-component']]
+]);

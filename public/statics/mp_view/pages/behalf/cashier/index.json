@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单支付",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "w-qrcode": "/uni_modules/wmf-code/components/w-qrcode/index",
+    "count-down": "/components/countDown/index"
+  }
+}

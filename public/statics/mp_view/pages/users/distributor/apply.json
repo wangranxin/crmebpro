@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分销员申请",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "verify": "/pages/users/components/verify/verify",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

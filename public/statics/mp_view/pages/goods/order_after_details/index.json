@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "售后详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "status-line": "/pages/goods/components/statusLine/index"
+  }
+}

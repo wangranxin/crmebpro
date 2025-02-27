@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "绑定手机",
+  "usingComponents": {
+    "verify": "/pages/users/components/verify/verify"
+  }
+}

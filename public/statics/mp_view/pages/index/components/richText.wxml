@@ -1,0 +1,1 @@
+<block wx:if="{{!dataConfig.isHide}}"><view style="{{$root.s0}}"><block wx:if="{{description}}"><view class="richText" style="{{$root.s1}}"><rich-text nodes="{{description}}"></rich-text></view></block></view></block>

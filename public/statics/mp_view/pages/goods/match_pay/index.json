@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "搭配购",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "base-drawer": "/components/tui-drawer/tui-drawer"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "话题列表",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "waterfalls-flow": "/components/discoverWaterfall/WaterfallsFlow"
+  }
+}

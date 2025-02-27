@@ -1,0 +1,1 @@
+<block wx:if="{{orderStaticData.is_show}}"><view><block wx:if="{{orderStaticData.style==1}}"><template1 vue-id="7d5970b6-1" staticData="{{orderAdminData}}" bind:__l="__l"></template1></block><block wx:if="{{orderStaticData.style==2}}"><template2 vue-id="7d5970b6-2" staticData="{{orderAdminData}}" bind:__l="__l"></template2></block></view></block>

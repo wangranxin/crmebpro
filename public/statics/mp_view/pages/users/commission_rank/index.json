@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "佣金排行",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

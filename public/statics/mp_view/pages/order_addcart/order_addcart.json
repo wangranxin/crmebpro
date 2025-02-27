@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "coupon-list-window": "/components/couponListWindow/index",
+    "page-footer": "/components/pageFooter/index",
+    "recommend": "/components/recommend/index",
+    "product-window": "/components/productWindow/index",
+    "cart-discount": "/components/cartDiscount/index",
+    "tui-swipe-action": "/components/tui-swipe-action/index",
+    "empty-page": "/components/emptyPage"
+  }
+}

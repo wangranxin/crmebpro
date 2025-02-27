@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "custom-form": "/components/customForm/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

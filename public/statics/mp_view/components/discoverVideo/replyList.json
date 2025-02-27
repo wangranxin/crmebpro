@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "empty-page": "/components/emptyPage",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "推广人排行",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

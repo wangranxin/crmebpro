@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "navigationBarTitleText": "核销记录",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

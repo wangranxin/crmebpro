@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "下单记录",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "empty-page": "/components/emptyPage"
+  }
+}

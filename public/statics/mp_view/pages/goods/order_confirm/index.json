@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "提交订单",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-datetime-picker": "/uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
+    "nav-bar": "/components/NavBar",
+    "invoice-picker": "/pages/goods/components/invoicePicker/index",
+    "coupon-list-window": "/components/couponListWindow/index",
+    "address-window": "/components/addressWindow/index",
+    "timeranges": "/components/timeranges/index",
+    "area-window": "/components/areaWindow/index",
+    "gift-drawer": "/pages/goods/components/giftDrawer/index",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

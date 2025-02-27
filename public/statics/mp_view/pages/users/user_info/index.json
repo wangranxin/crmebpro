@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "个人资料",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-modal": "/components/tui-modal/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

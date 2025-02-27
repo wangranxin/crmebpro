@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "top-bar": "/pages/user/components/topBar"
+  }
+}

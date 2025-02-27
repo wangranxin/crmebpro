@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "订单支付",
+  "usingComponents": {
+    "count-down": "/components/countDown/index"
+  }
+}

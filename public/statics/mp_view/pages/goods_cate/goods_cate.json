@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "商品分类",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "template1": "/pages/goods_cate/template/template1",
+    "template2": "/pages/goods_cate/template/template2",
+    "template3": "/pages/goods_cate/template/template3",
+    "template4": "/pages/goods_cate/template/template4",
+    "page-footer": "/components/pageFooter/index"
+  }
+}

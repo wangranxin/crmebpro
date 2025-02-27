@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "我的推广",
+  "usingComponents": {
+    "task": "/pages/users/user_spread_user/components/task",
+    "base-money": "/components/BaseMoney",
+    "nav-bar": "/components/NavBar",
+    "base-code": "/components/BaseCode"
+  }
+}

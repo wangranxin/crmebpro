@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "template1": "/pages/user/components/member/template1",
+    "template2": "/pages/user/components/member/template2",
+    "template3": "/pages/user/components/member/template3",
+    "template4": "/pages/user/components/member/template4",
+    "template5": "/pages/user/components/member/template5",
+    "top-bar": "/pages/user/components/topBar"
+  }
+}

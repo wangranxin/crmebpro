@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "uni-badge": "/uni_modules/uni-badge/components/uni-badge/uni-badge",
+    "recommend": "/components/recommend/index",
+    "home-list": "/components/homeList/index",
+    "waterfalls-flow": "/components/WaterfallsFlow/WaterfallsFlow",
+    "product-window": "/components/productWindow/index",
+    "filter-drawer": "/pages/goods/components/filterDrwer/index",
+    "empty-page": "/components/emptyPage",
+    "cart-list": "/components/cartList/index"
+  }
+}

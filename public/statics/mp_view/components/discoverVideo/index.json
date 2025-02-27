@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "reply-list": "/components/discoverVideo/replyList",
+    "tui-modal": "/components/tui-modal/index",
+    "base-text-more": "/components/BaseTextMore"
+  }
+}

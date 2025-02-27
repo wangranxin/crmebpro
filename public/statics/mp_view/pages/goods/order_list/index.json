@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-badge": "/uni_modules/uni-badge/components/uni-badge/uni-badge",
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "loading": "/components/Loading/index",
+    "empty-page": "/components/emptyPage",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

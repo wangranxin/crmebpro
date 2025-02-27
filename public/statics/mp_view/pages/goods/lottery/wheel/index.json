@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "抽奖活动",
+  "usingComponents": {
+    "notice-bar": "/pages/goods/lottery/components/noticeBar",
+    "lottery-aleart": "/pages/goods/components/lotteryAleart/index"
+  }
+}

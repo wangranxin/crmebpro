@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "home": "/components/home/index",
+    "nav-bar": "/components/NavBar",
+    "empty-page": "/components/emptyPage"
+  }
+}

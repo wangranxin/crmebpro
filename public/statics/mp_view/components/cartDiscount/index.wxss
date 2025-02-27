@@ -1,0 +1,1 @@
+.scroll-content.data-v-7cde7752{max-height:800rpx}.show-footer.data-v-7cde7752{height:calc(194rpx + env(safe-area-inset-bottom))}.hide-footer.data-v-7cde7752{height:calc(100rpx + env(safe-area-inset-bottom))}

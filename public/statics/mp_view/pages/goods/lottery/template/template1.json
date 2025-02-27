@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "grids-lottery": "/pages/goods/components/lottery/index",
+    "show-box": "/pages/goods/lottery/components/showbox",
+    "notice-bar": "/pages/goods/lottery/components/noticeBar",
+    "zb-code": "/components/zb-code/zb-code"
+  }
+}

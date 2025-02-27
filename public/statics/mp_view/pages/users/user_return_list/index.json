@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "售后退款",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

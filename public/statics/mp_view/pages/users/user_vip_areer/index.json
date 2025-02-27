@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "经验记录",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

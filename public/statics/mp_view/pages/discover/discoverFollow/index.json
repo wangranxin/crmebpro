@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

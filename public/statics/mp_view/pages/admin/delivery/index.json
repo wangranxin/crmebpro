@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发送货",
+  "usingComponents": {
+    "split-order": "/components/splitOrder/index"
+  }
+}

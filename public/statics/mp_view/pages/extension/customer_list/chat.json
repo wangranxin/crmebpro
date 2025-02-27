@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "对话详情",
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "tui-drawer": "/components/tui-drawer/tui-drawer",
+    "loading": "/components/Loading/index"
+  }
+}

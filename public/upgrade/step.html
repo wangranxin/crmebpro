@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$title|default=''} - {$powered|default=''}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://www.layuicdn.com/layui-v2.5.6/css/layui.css" rel="stylesheet">
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+    <style>
+        body {
+            background-color: #f3f3f4;
+        }
+        .layui-fluid {
+            padding: 15px;
+        }
+        .layui-card-header {
+            font-weight: bold;
+        }
+        .layui-elem-quote {
+            border-left-color: #1E9FFF;
+            font-size: 16px;
+        }
+        .layui-elem-quote span {
+            color: #1E9FFF;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-fluid" id="app" v-cloak>
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">数据迁移系统</div>
+                <div class="layui-card-body">
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-md12">
+                            <blockquote class="layui-elem-quote">迁移版本：<span>标准版{$version_bz} - pro{$version_pro}</span></blockquote>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div class="layui-form">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">服务器地址</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="hostname" autocomplete="off" placeholder="请输入数据库服务器地址" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">数据库名</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="database" autocomplete="off" placeholder="请输入数据库名" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">用户名</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="username" autocomplete="off" placeholder="请输入数据库用户名" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">数据库密码</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="password" autocomplete="off" placeholder="请输入数据库密码" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">数据库端口</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="hostport" autocomplete="off" placeholder="请输入数据库端口" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">表前缀</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" v-model="prefix" autocomplete="off" placeholder="请输入表前缀" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button type="button" class="layui-btn layui-btn-normal" v-if="isUpgrade && executeIng">正在迁移中</button>
+                                        <button type="button" class="layui-btn layui-btn-normal" v-if="!isUpgrade && !executeIng">迁移完毕</button>
+                                        <button type="button" class="layui-btn layui-btn-normal" v-if="isUpgrade && !executeIng" @click="startUpgrade">立即迁移</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md12">
+        <div class="layui-card">
+            <div class="layui-card-body">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>表名</th>
+                        <th>迁移状态</th>
+                        <th style="overflow: hidden;word-break: break-all;">错误原因</th>
+                        <th>执行时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="(item, index) in upgradeData" :key="index">
+                        <td>{{item.table}}</td>
+                        <td>{{ item.status ? '迁移成功' : '迁移失败' }}</td>
+                        <td>{{ item.error }}</td>
+                        <td>{{ item.add_time }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    var isUpgrade = <?=$isUpgrade ? 'true' : 'false'?>;
+    new Vue({
+        el: '#app',
+        data: {
+            sleep: 0,
+            hostname: '',
+            username: '',
+            database: '',
+            password: '',
+            hostport: '3306',
+            prefix: 'eb_',
+            upgradeData: [],
+            isUpgrade: isUpgrade,
+            executeIng: false,
+        },
+        methods: {
+            startUpgrade: function () {
+                var that = this;
+                if (!that.hostname) {
+                    return that.showMsg('请填写数据库服务器地址');
+                }
+                if (!that.database) {
+                    return that.showMsg('请填写数据库名');
+                }
+                if (!that.username) {
+                    return that.showMsg('请填写数据库用户名');
+                }
+                if (!that.password) {
+                    return that.showMsg('请填写数据库密码');
+                }
+                if (!that.hostport) {
+                    return that.showMsg('请填写表前缀');
+                }
+                if (!that.prefix) {
+                    return that.showMsg('请填写表前缀');
+                }
+                $.ajax({
+                    type: "POST",
+                    url: 'upgrade_transfer',
+                    data: {
+                        hostname:that.hostname,
+                        database:that.database,
+                        username:that.username,
+                        password:that.password,
+                        hostport:that.hostport,
+                        prefix:that.prefix,
+                        sleep:that.sleep
+                    },
+                    dataType: 'json',
+                    success: function(res){
+                        if (res.data.sleep !== -1) {
+                            that.sleep = res.data.sleep;
+                            that.upgradeData.push(res.data);
+                            that.executeIng = true;
+                            setTimeout(function () {
+                                that.startUpgrade();
+                            }, 100);
+                        } else {
+                            that.isUpgrade = false;
+                            that.executeIng = false;
+                            return that.showMsg('执行完毕');
+                        }
+                    }
+                });
+            },
+            requestGet: function (url, data) {
+                var params = Object.keys(data).map(function (key) {
+                    return key + '=' + data[key];
+                }).join('&');
+                return new Promise(function (resolve, reject) {
+                    axios.get(url + (params ? '?' + params : '')).then(function (res) {
+                        if (res.status == 200) {
+                            resolve(res.data)
+                        } else {
+                            reject(res.data);
+                        }
+                    }).catch(function (err) {
+                        reject({msg: err})
+                    });
+                })
+            },
+            showMsg: function (msg, success) {
+                layui.use(['layer'], function () {
+                    layui.layer.msg(msg, success);
+                });
+            },
+        }
+    })
+</script>
+</body>
+</html>

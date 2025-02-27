@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "评价详情",
+  "usingComponents": {
+    "tui-drawer": "/components/tui-drawer/tui-drawer"
+  }
+}

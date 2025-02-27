@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员优惠券",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

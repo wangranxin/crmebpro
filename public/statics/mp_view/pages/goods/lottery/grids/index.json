@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "抽奖活动",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "template1": "/pages/goods/lottery/template/template1",
+    "template2": "/pages/goods/lottery/template/template2",
+    "grids-lottery": "/pages/goods/components/lottery/index",
+    "show-box": "/pages/goods/lottery/components/showbox",
+    "notice-bar": "/pages/goods/lottery/components/noticeBar",
+    "lottery-aleart": "/pages/goods/components/lotteryAleart/index",
+    "zb-code": "/components/zb-code/zb-code",
+    "empty-page": "/components/emptyPage",
+    "nav-bar": "/components/NavBar"
+  }
+}

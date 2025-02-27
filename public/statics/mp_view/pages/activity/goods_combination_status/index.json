@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "拼团",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "count-down": "/components/countDown/index",
+    "product-window": "/components/productWindow/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

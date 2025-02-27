@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "product-window": "/components/productWindow/index",
+    "empty-page": "/components/emptyPage",
+    "cus-preview-img": "/components/cusPreviewImg/index"
+  }
+}

@@ -1,0 +1,1 @@
+<view><block wx:if="{{level==3}}"><template1 class="vue-ref" vue-id="7df8318c-1" userId="{{userId}}" touristId="{{touristId}}" data-ref="classOne" bind:__l="__l"></template1></block><block wx:if="{{level==2}}"><template2 class="vue-ref" vue-id="7df8318c-2" userId="{{userId}}" touristId="{{touristId}}" data-ref="classTwo" bind:__l="__l"></template2></block></view>

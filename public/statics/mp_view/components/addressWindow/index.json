@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "empty-page": "/components/emptyPage"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "申请记录",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "empty-page": "/components/emptyPage"
+  }
+}

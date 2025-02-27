@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "notice-bar": "/pages/goods/lottery/components/noticeBar"
+  }
+}

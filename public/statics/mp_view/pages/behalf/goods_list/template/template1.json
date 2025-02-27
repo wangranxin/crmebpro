@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "uni-badge": "/uni_modules/uni-badge/components/uni-badge/uni-badge",
+    "product-window": "/pages/behalf/components/productWindow",
+    "empty-page": "/components/emptyPage",
+    "cart-list": "/pages/behalf/components/cartList"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单评价",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "grids-lottery": "/pages/goods/components/lottery/payLottery",
+    "lottery-aleart": "/pages/goods/components/lotteryAleart/index",
+    "count-down": "/components/countDown/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "地址管理",
+  "usingComponents": {
+    "tui-swipe-action": "/components/tui-swipe-action/index",
+    "empty-page": "/components/emptyPage"
+  }
+}

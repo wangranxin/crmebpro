@@ -1,0 +1,1 @@
+<block wx:if="{{!dataConfig.isHide}}"><view style="{{$root.s0}}" class="data-v-d6348f0e"><view class="video-box data-v-d6348f0e" style="{{$root.s1}}" id="myVideo"><video class="video data-v-d6348f0e" object-fit="cover" src="{{dataConfig.videoConfig.url}}" poster="{{dataConfig.imgConfig.url}}" controls="{{true}}"></video></view></view></block>

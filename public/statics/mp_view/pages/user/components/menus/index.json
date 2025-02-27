@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "template1": "/pages/user/components/menus/template1",
+    "template2": "/pages/user/components/menus/template2",
+    "template3": "/pages/user/components/menus/template3"
+  }
+}

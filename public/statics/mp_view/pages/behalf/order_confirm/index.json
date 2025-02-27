@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "coupon-list-window": "/components/couponListWindow/index",
+    "gift-drawer": "/pages/behalf/components/giftDrawer",
+    "tui-modal": "/components/tui-modal/index",
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "empty-page": "/components/emptyPage"
+  }
+}

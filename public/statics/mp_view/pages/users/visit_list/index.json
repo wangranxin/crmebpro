@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "浏览记录",
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "recommend": "/components/recommend/index",
+    "base-money": "/components/BaseMoney",
+    "empty-page": "/components/emptyPage"
+  }
+}

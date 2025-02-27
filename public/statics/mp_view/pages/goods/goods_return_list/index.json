@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "批量退款",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "split-order": "/components/splitOrder/index"
+  }
+}

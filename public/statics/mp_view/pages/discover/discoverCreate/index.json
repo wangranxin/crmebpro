@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "内容发布",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "empty-page": "/components/emptyPage"
+  }
+}

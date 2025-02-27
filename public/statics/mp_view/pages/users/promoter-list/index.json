@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的团队",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "time-slot": "/components/timeSlot/index",
+    "empty-page": "/components/emptyPage"
+  }
+}

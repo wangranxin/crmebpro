@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "拼团列表",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "empty-page": "/components/emptyPage",
+    "nav-bar": "/components/NavBar"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "注销账号",
+  "usingComponents": {
+    "tui-modal": "/components/tui-modal/index"
+  }
+}

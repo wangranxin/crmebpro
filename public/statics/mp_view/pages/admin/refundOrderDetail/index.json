@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "price-change": "/pages/admin/components/PriceChange/index",
+    "custom-form": "/components/customForm/index",
+    "nav-bar": "/components/NavBar"
+  }
+}

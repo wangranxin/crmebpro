@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "template1": "/pages/user/components/order/template1",
+    "template2": "/pages/user/components/order/template2"
+  }
+}

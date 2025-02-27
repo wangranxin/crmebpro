@@ -1,0 +1,288 @@
+{
+  "pages": [
+    "pages/guide/index",
+    "pages/index/index",
+    "pages/order_addcart/order_addcart",
+    "pages/goods_details/index",
+    "pages/user/index",
+    "pages/goods_cate/goods_cate",
+    "pages/discoverIndex/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/users",
+      "pages": [
+        "user_vip_areer/index",
+        "privacy/index",
+        "user_cancellation/index",
+        "message_center/index",
+        "message_center/messageDetail",
+        "user_invoice_order/index",
+        "scan_login/index",
+        "user_invoice_list/index",
+        "user_invoice_form/index",
+        "wechat_login/index",
+        "binding_phone/index",
+        "retrievePassword/index",
+        "user_set/index",
+        "user_info/index",
+        "visit_list/index",
+        "user_goods_collection/index",
+        "user_sgin/index",
+        "user_sgin_list/index",
+        "user_money/index",
+        "user_bill/index",
+        "user_integral/index",
+        "user_integral_detail/index",
+        "user_coupon/index",
+        "user_spread_user/index",
+        "user_spread_code/index",
+        "user_spread_money/index",
+        "user_spread_money/receiving",
+        "user_distribution_info/index",
+        "user_cash/index",
+        "user_cash/status",
+        "user_vip/index",
+        "user_distribution_level/index",
+        "user_address_list/index",
+        "user_agreement_list/index",
+        "user_address/index",
+        "user_address/addClient",
+        "user_phone/index",
+        "user_payment/index",
+        "user_pwd_edit/index",
+        "promoter-list/index",
+        "promoter-order/index",
+        "promoter_rank/index",
+        "commission_rank/index",
+        "user_return_list/index",
+        "login/index",
+        "supplier/index",
+        "supplier/state",
+        "supplier/record",
+        "distributor/apply",
+        "distributor/index",
+        "agent/apply",
+        "agent/state",
+        "agent/record",
+        "agent/staff_list",
+        "user_member_code/index",
+        "paymentBehalf/index",
+        "paymentBehalf/payStatus",
+        "spreadData/index",
+        "spreadData/contributionRank"
+      ],
+      "name": "users"
+    },
+    {
+      "root": "pages/activity",
+      "pages": [
+        "goods_bargain/index",
+        "goods_bargain_details/index",
+        "goods_combination/index",
+        "goods_combination_status/index",
+        "goods_seckill/index",
+        "goods_details/index",
+        "bargain/index",
+        "presell/index",
+        "points_mall/index",
+        "coupon/index",
+        "new_customer/index"
+      ],
+      "name": "activity"
+    },
+    {
+      "root": "pages/admin",
+      "pages": [
+        "user/list",
+        "user/index",
+        "goods/index",
+        "goods/specs",
+        "order/index",
+        "orderList/index",
+        "orderDetail/index",
+        "delivery/index",
+        "order_cancellation/index",
+        "distribution/index",
+        "distribution/scanning/index",
+        "distribution/scanning/detail/index",
+        "distribution/orderDetail/index",
+        "work/index",
+        "logistics/index",
+        "refundOrderList/index",
+        "refund/index",
+        "refundOrderDetail/index",
+        "writeRecordList/index",
+        "offOrderResult/index",
+        "writeOffCard/index"
+      ],
+      "name": "adminOrder"
+    },
+    {
+      "root": "pages/columnGoods",
+      "pages": [
+        "live_list/index",
+        "rank/index"
+      ],
+      "name": "columnGoods"
+    },
+    {
+      "root": "pages/annex",
+      "pages": [
+        "web_view/index",
+        "vip_paid/index",
+        "vip_paid_active/index",
+        "vip_paid_rights/index",
+        "vip_grade/index",
+        "record_list/index",
+        "vip_grade_active/index",
+        "vip_coupon/index",
+        "vip_clause/index",
+        "vip_active/index",
+        "offline_pay/index",
+        "offline_result/index",
+        "special/index"
+      ]
+    },
+    {
+      "root": "pages/extension",
+      "pages": [
+        "invite_friend/index",
+        "customer_list/chat",
+        "customer_list/feedback",
+        "news_list/index",
+        "news_details/index",
+        "complain/index"
+      ],
+      "name": "extension"
+    },
+    {
+      "root": "pages/work",
+      "pages": [
+        "userInfo/index",
+        "orderList/index",
+        "orderDetail/index",
+        "record/index",
+        "groupInfo/index"
+      ],
+      "name": "work"
+    },
+    {
+      "root": "pages/goods",
+      "pages": [
+        "goods_list/index",
+        "goods_search/index",
+        "order_pay_status/index",
+        "goods_comment_list/index",
+        "goods_comment_con/index",
+        "goods_comment_con/comment_con",
+        "goods_comment_con/lottery_comment",
+        "goods_logistics/index",
+        "goods_return_list/index",
+        "goods_return/index",
+        "order_details/index",
+        "order_list/index",
+        "order_refund_goods/index",
+        "order_confirm/index",
+        "lottery/grids/index",
+        "lottery/wheel/index",
+        "lottery/grids/record",
+        "cashier/index",
+        "order_after_details/index",
+        "match_pay/index",
+        "goodsDiscover/index",
+        "goodsShare/index"
+      ],
+      "name": "goods"
+    },
+    {
+      "root": "pages/behalf",
+      "pages": [
+        "user_list/index",
+        "goods_list/index",
+        "record/index",
+        "order_confirm/index",
+        "cashier/index"
+      ],
+      "name": "behalf"
+    },
+    {
+      "root": "pages/discover",
+      "pages": [
+        "discoverUser/index",
+        "discoverCreate/index",
+        "discoverCreate/topic",
+        "discoverDetails/index",
+        "discoverTopic/index",
+        "discoverFollow/index",
+        "discoverSearch/index",
+        "discoverVideo/index",
+        "discoverMessage/index"
+      ],
+      "name": "discover"
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "加载中",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#F8F8F8",
+    "titleNView": false
+  },
+  "tabBar": {
+    "color": "#282828",
+    "selectedColor": "#E93323",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/1-001.png",
+        "selectedIconPath": "static/images/1-002.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/goods_cate/goods_cate",
+        "iconPath": "static/images/2-001.png",
+        "selectedIconPath": "static/images/2-002.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/discoverIndex/index",
+        "iconPath": "static/images/5-001.png",
+        "selectedIconPath": "static/images/5-002.png",
+        "text": "逛逛"
+      },
+      {
+        "pagePath": "pages/order_addcart/order_addcart",
+        "iconPath": "static/images/3-001.png",
+        "selectedIconPath": "static/images/3-002.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "static/images/4-001.png",
+        "selectedIconPath": "static/images/4-002.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于和门店的距离长度"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation",
+    "chooseAddress"
+  ],
+  "usingComponents": {
+    "home": "/components/home/index",
+    "skeleton": "/components/skeleton/index",
+    "base-money": "/components/BaseMoney",
+    "base-tag": "/components/BaseTag",
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage"
+  }
+}

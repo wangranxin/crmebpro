@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分销订单",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "time-slot": "/components/timeSlot/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "佣金记录",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "empty-page": "/components/emptyPage",
+    "time-slot": "/components/timeSlot/index"
+  }
+}

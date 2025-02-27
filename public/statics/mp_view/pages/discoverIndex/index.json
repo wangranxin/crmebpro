@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "empty-page": "/components/emptyPage",
+    "waterfalls-flow": "/components/discoverWaterfall/WaterfallsFlow",
+    "base-drawer": "/components/tui-drawer/tui-drawer",
+    "discover-video": "/components/discoverVideo/index",
+    "page-footer": "/components/pageFooter/index",
+    "base-text-more": "/components/BaseTextMore"
+  }
+}

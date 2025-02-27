@@ -1,0 +1,194 @@
+<?php
+// +----------------------------------------------------------------------
+// | CRMEB [ CRMEB赋能开发者，助力企业发展 ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2016~2020 https://www.crmeb.com All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed CRMEB并不是自由软件，未经许可不能去掉CRMEB相关版权
+// +----------------------------------------------------------------------
+// | Author: CRMEB Team <admin@crmeb.com>
+// +----------------------------------------------------------------------
+
+namespace app\services\product\product;
+
+
+use app\dao\product\product\StoreProductReplyCommentDao;
+use app\services\BaseServices;
+use app\services\user\UserRelationServices;
+use app\services\user\UserServices;
+use think\annotation\Inject;
+use think\exception\ValidateException;
+
+/**
+ * Class StoreProductReplyCommentServices
+ * @package app\services\product\product
+ * @mixin StoreProductReplyCommentDao
+ */
+class StoreProductReplyCommentServices extends BaseServices
+{
+    /**
+     * @var StoreProductReplyCommentDao
+     */
+    #[Inject]
+    protected StoreProductReplyCommentDao $dao;
+
+    /**
+     * 获取评论回复列表
+     * @param int $replyId
+     * @param string $time
+     * @param int $uid
+     * @param bool $notUid
+     * @return array
+     */
+    public function getReplCommenList(int $replyId, string $time = '', int $uid = 0, bool $notUid = true)
+    {
+        [$page, $limit] = $this->getPageValue();
+        $where = ['reply_id' => $replyId, 'pid' => 0, 'notUid' => 0, 'create_time' => $time];
+        if (false === $notUid) {
+            unset($where['notUid']);
+        }
+        $list = $this->dao->getDataList($where, ['*'], $page, $limit, ['praise' => 'desc', 'create_time' => 'desc'], [
+            'user' => function ($query) {
+                $query->field('uid,avatar,nickname,is_money_level');
+            },
+            'children' => function ($query) use ($uid) {
+                $query->with([
+                    'user' => function ($query) {
+                        $query->field('uid,avatar,nickname,is_money_level');
+                    },
+                    'productRelation' => function ($query) use ($uid) {
+                        $query->where('uid', $uid)->where('type', UserRelationServices::TYPE_LIKE)
+                            ->where('category', UserRelationServices::CATEGORY_COMMENT)
+                            ->field(['uid', 'relation_id']);
+                    }
+                ]);
+            },
+            'productRelation' => function ($query) use ($uid) {
+                $query->where('uid', $uid)->where('type', UserRelationServices::TYPE_LIKE)
+                    ->where('category', UserRelationServices::CATEGORY_COMMENT)
+                    ->field(['uid', 'relation_id']);
+            }
+        ]);
+        $count = $this->dao->count($where);
+        $siteLogoSquare = sys_config('site_logo_square');
+        $siteName = sys_config('site_name');
+
+        //用户是否是付费会员和等级会员
+        $uids = array_column($list, 'uid');
+        $uids = array_filter(array_unique($uids));
+        /** @var UserServices $userServices */
+        $userServices = app()->make(UserServices::class);
+        $vipArray = $userServices->checkIsVip($uids);
+
+        foreach ($list as &$item) {
+            if (!isset($item['user']) && $item['uid'] === 0) {
+                $item['user'] = ['nickname' => $siteName, 'avatar' => $siteLogoSquare];
+            }
+            if (isset($item['children']) && !isset($item['children']['user']) && $item['children']['uid'] === 0) {
+                $item['children']['user'] = ['nickname' => $siteName, 'avatar' => $siteLogoSquare];
+            }
+            if (isset($item['user']['nickname'])) {
+                $item['user']['nickname'] = anonymity($item['user']['nickname']);
+            }
+            $item['user']['level_name'] = $vipArray[$item['uid']]['level_name'] ?? '';
+            $item['user']['vip_status'] = $vipArray[$item['uid']]['vip_status'] ?? '';
+            if ($uid) {
+                $item['is_praise'] = !empty($item['productRelation']);
+                if (isset($item['children'])) {
+                    $item['children']['is_praise'] = !empty($item['children']['productRelation']);
+                }
+            } else {
+                $item['is_praise'] = false;
+                if (isset($item['children'])) {
+                    $item['children']['is_praise'] = false;
+                }
+            }
+        }
+        return compact('list', 'count');
+    }
+
+    /**
+     * 保存回复
+     * @param int $uid
+     * @param int $replyId
+     * @param string $content
+     * @return \crmeb\basic\BaseModel|\think\Model
+     */
+    public function saveComment(int $uid, int $replyId, string $content)
+    {
+        return $this->dao->save(['uid' => $uid, 'reply_id' => $replyId, 'content' => $content, 'create_time' => time()]);
+    }
+
+    /**
+     * 点赞回复
+     * @param int $id
+     * @param int $uid
+     * @return bool
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\DbException
+     * @throws \think\db\exception\ModelNotFoundException
+     */
+    public function commentPraise(int $id, int $uid)
+    {
+        $commentInfo = $this->dao->get($id, ['id', 'praise']);
+        if (!$commentInfo) {
+            throw new ValidateException('回复不存在');
+        }
+        $commentInfo->praise++;
+        /** @var UserRelationServices $service */
+        $service = app()->make(UserRelationServices::class);
+        $res = $service->getUserCount($uid, $id, UserRelationServices::TYPE_LIKE, UserRelationServices::CATEGORY_COMMENT);
+        if ($res) {
+            return true;
+        }
+        $this->transaction(function () use ($id, $uid, $service, $commentInfo) {
+            $res = $service->save([
+                'uid' => $uid,
+                'relation_id' => $id,
+                'type' => UserRelationServices::TYPE_LIKE,
+                'category' => UserRelationServices::CATEGORY_COMMENT,
+                'add_time' => time()
+            ]);
+            $res = $res && $commentInfo->save();
+            if (!$res) {
+                throw new ValidateException('点赞失败');
+            }
+        });
+        event('product.reply.update', [$uid]);
+        return true;
+    }
+
+    /**
+     * 取消回复点赞
+     * @param int $id
+     * @param int $uid
+     * @return bool
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\DbException
+     * @throws \think\db\exception\ModelNotFoundException
+     */
+    public function unCommentPraise(int $id, int $uid)
+    {
+        $commentInfo = $this->dao->get($id, ['id', 'praise']);
+        if (!$commentInfo) {
+            throw new ValidateException('回复不存在');
+        }
+        $commentInfo->praise--;
+        /** @var UserRelationServices $service */
+        $service = app()->make(UserRelationServices::class);
+        $this->transaction(function () use ($id, $uid, $service, $commentInfo) {
+            $res = $service->delete([
+                'uid' => $uid,
+                'relation_id' => $id,
+                'type' => UserRelationServices::TYPE_LIKE,
+                'category' => UserRelationServices::CATEGORY_COMMENT
+            ]);
+            $res = $res && $commentInfo->save();
+            if (!$res) {
+                throw new ValidateException('点赞失败');
+            }
+        });
+        event('product.reply.update', [$uid]);
+        return true;
+    }
+}

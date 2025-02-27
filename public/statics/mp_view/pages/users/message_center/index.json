@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#f5f5f5",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "消息中心",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tui-swipe-action": "/components/tui-swipe-action/index"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "count-down": "/components/countDown/index",
+    "nav-bar": "/components/NavBar",
+    "base-drawer": "/components/tui-drawer/tui-drawer"
+  }
+}

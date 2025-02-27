@@ -1,0 +1,1 @@
+.styleAll{padding:0 6rpx;border:1rpx solid #ddd;border-radius:8rpx}.pay_card{padding:40rpx 32rpx}.pay_item ~ .pay_item{margin-top:56rpx}.icon-ic_unselect{color:#ccc}.icon-a-ic_CompleteSelect{color:var(--view-theme)}

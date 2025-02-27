@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "账户充值",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-modal": "/components/tui-modal/index",
+    "home": "/components/home/index"
+  }
+}

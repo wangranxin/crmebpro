@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "代客下单",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "easy-loadimage": "/components/easy-loadimage/easy-loadimage",
+    "empty-page": "/components/emptyPage"
+  }
+}

@@ -1,0 +1,1 @@
+.drawer_box{width:668rpx;border-radius:40rpx 0 0 40rpx;overflow:auto}.box_gap{grid-row-gap:24rpx;grid-column-gap:26rpx}.con_border{border:1rpx solid var(--view-theme)}.active{border:1px solid var(--view-theme);color:var(--view-theme);background:var(--view-minorColorT)}

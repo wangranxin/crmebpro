@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "立即退款",
+  "usingComponents": {
+    "split-order": "/components/splitOrder/index"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "售后订单",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "loading": "/components/Loading/index",
+    "price-change": "/pages/admin/components/PriceChange/index",
+    "empty-page": "/components/emptyPage",
+    "nav-bar": "/components/NavBar"
+  }
+}
